@@ -1,0 +1,18 @@
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.li {
+  list-style: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}

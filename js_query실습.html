@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        책 리스트
+    </h1>    
+
+    <input type="text" id="book_name">
+    <button type="button" id="register_book">등록</button>
+    <ul id="book_list">
+
+    </ul>
+
+    <!-- <script type="text/javascript">
+    // Native javascript
+        // Document Loading 되었는지 Event Listner 등록.
+        document.addEventListener('DOMContentLoaded' , function(){
+        
+        // var : 변수 -> scope 함수가 scope, 문제 가능성이 높음 
+        // let : 변수 -> 비교적최신, scope가 block{} scope
+        // const : 상수 -> 값 수정 안됌
+
+        const register_btn = document.getElementById('register_book');
+        register_btn.addEventListener('click', function(){
+            let book_name_elem = document.getElementById('book_name');
+            let book_name = book_name_elem.value;
+
+            let li_tag = document.createElement('li');
+            li_tag.innerText = book_name;
+
+            let ul_tag = document.getElementById('book_list');
+            ul_tag.appendChild(li_tag);
+
+            alert("등록완료.");
+            book_name_elem.value = ' ';
+
+
+        });
+        
+     })
+    </script> -->
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $('#register_book').click(function() {
+            let book_name = $('#book_name').val();
+
+            $('ul#book_list').append(
+                `<li>${book_name}</li>`
+            );
+            $('#book_name').val('');
+            alert("등록완료");
+
+        })
+    
+
+    </script>
+    
+
+
+</body>
+
+</html>
